@@ -58,9 +58,19 @@ python eval/compare.py --results results --out results/leaderboard.md
 
 ## 已有评测记录
 
-`03-benchmark-eval/results/` 放着一次全量 4,000 题的实测（豆包 normal 82.15% / deep 82.17%，
-含 338 条无效作答的说明）。这些是**历史记录**，由当时的脚本产生；换模型请按上面的命令重跑，
-不要直接引用旧数字。
+`03-benchmark-eval/results/` 放着真实模型的实测记录，除特别标注外均为 4,000 题全量、
+全量口径（未抽取与调用失败计入分母，与交付包 `metrics.summarize` 默认一致）：
+
+| 模型 | 常规模式 | 深度模式 | 明细 |
+|---|---|---|---|
+| DeepSeek-V4.1-Flash-1017 | **90.52%** | **91.80%** | [`评测报告_deepseek-flash.md`](03-benchmark-eval/results/评测报告_deepseek-flash.md) |
+| DeepSeek-V4-Pro | **86.92%** | **90.10%** | [`summary_v4pro-full.md`](03-benchmark-eval/results/summary_v4pro-full.md) / [`summary_v4pro-reasoning.md`](03-benchmark-eval/results/summary_v4pro-reasoning.md) |
+| qwen4-max | **94.54%**（`core` 子集 3,811 题） | — | [`summary_qwen4max-normal.md`](03-benchmark-eval/results/summary_qwen4max-normal.md) |
+
+每个模型两种模式各跑一遍，**只有提示词不同、题目不变**，差值即"多想一会儿"的净收益。
+分板块、分难度、板块×难度矩阵与置信区间的完整明细见各自的 summary 文件。
+
+换模型请按上面的命令重跑，不要直接引用这些数字。
 
 ---
 
@@ -91,7 +101,7 @@ hs-math-benchmark/
     ├── dataset/                 4,000 条（JSON 模板格式）+ 统计 + 质检 + 图片
     ├── eval/                    评测脚本（API / 本地 HF / llama.cpp / mock）
     ├── docs/                    数据集说明、格式说明、评测说明、汇报要点、审计修复对照
-    ├── results/                 历史评测记录
-    ├── slides/                  第三次汇报 PPT
+    ├── results/                 真实模型评测记录（Flash / V4-Pro / qwen4-max）
+    ├── slides/                  第三次汇报 PPT（正式版 + 空白模板）
     └── README.md                交付包使用说明
 ```

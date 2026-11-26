@@ -29,6 +29,8 @@
 │   ├── config.example.yaml            配置模板（换成 API/本地模型时改它）
 │   ├── tests/test_eval.py             单元自测
 │   └── results/                       一次完整示例评测（mock，仅验证链路）
+├── results/                           真实模型评测记录（Flash / V4-Pro / qwen4-max）
+├── slides/                            第三次汇报 PPT（正式版 + 空白模板）
 └── docs/
     ├── 数据集说明.md                  规模、字段、清洗、难度口径、偏差
     ├── 数据格式说明.md                JSON 模板字段映射与校验
@@ -107,8 +109,20 @@ results/
 └── matrix_<tag>.csv      板块 × 难度矩阵
 ```
 
-`results/` 里放了两份完整示例（mock 后端）：`demo-normal` 与 `demo-deep`，
+`eval/results/` 里放了两份完整示例（mock 后端）：`demo-normal` 与 `demo-deep`，
 `meta.mock = true`，**不是模型成绩**，只用来确认表格长什么样、两种方式差在哪。
+
+真实模型的评测记录在包根的 `results/`（不在 `eval/results/`）：
+
+| 文件 | 模型 | 模式 | 准确率 | 题数 |
+|---|---|---|---|---|
+| `results/评测报告_deepseek-flash.md` | DeepSeek-V4.1-Flash-1017 | 常规 / 深度 | 90.52% / 91.80% | 4,000 |
+| `results/summary_v4pro-full.md` | DeepSeek-V4-Pro | 常规 | 86.92% | 4,000 |
+| `results/summary_v4pro-reasoning.md` | DeepSeek-V4-Pro | 深度 | 90.10% | 4,000 |
+| `results/summary_qwen4max-normal.md` | qwen4-max | 常规 | 94.54% | 3,811（`core`） |
+
+口径统一为全量口径（未抽取与调用失败计入分母）。Flash 的报告另给了「有效作答口径」，
+横向对比时务必先对齐分母。
 
 ---
 
