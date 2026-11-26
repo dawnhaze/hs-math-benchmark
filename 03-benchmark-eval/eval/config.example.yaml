@@ -1,0 +1,54 @@
+# ============================================================================
+#  高中数学 Benchmark · 评测配置
+#  复制为 config.yaml 后改；命令行参数优先级高于本文件。
+# ============================================================================
+
+run:
+  prompt: zero_shot        # zero_shot | cot
+  temperature: 0.0         # 评测默认贪心解码；做稳定性实验再调高
+  max_tokens: 512
+  concurrency: 8           # API 端点并发；本地模型会自动改成 1
+  retries: 3               # 单题失败重试次数（指数退避）
+  seed: 0                  # 仅对 mock / 采样生效
+
+data:
+  dataset: ../crawler/data/benchmark_v3/benchmark_v3.template.jsonl
+
+output:
+  dir: results
+
+# ---------------------------------------------------------------------------
+# 后端三选一：改 type 即可，其余字段按后端需要填
+# ---------------------------------------------------------------------------
+provider:
+  type: mock               # openai | hf | llamacpp | mock
+
+  # ---- ① OpenAI 兼容端点（含 DeepSeek / 通义 / 智谱 / vLLM / Ollama）----
+  model: deepseek-chat
+  base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY     # 从环境变量读，不把 Key 写进仓库
+  timeout: 180
+
+  # ---- ② 本地 transformers ----
+  # type: hf
+  # model_path: /models/Qwen2.5-7B-Instruct
+  # device: cuda
+  # dtype: float16
+  # device_map: auto
+
+  # ---- ③ 本地 GGUF（llama.cpp）----
+  # type: llamacpp
+  # model_path: /models/qwen2.5-7b-instruct-q4_k_m.gguf
+  # n_ctx: 4096
+  # n_threads: 8
+
+  # ---- ④ 离线自检 ----
+  mock_accuracy: 0.62       # mock 后端的模拟正确率，仅用于跑通链路
+
+# ---------------------------------------------------------------------------
+# 测试方式（两种，提示词写死在 eval/prompts.py，改这里只切模式）
+#   normal : 常规测试，一次作答
+#   deep   : 深度思考测试，首答 + 固定复核提示词多轮独立重算
+# ---------------------------------------------------------------------------
+mode: normal
+deep_rounds: 2        # 仅 deep 生效：总轮数（含首答）

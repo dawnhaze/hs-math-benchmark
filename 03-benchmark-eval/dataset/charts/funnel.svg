@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+<rect width="960" height="560" fill="#FFFFFF"/>
+<text x="40.0" y="46.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="24" fill="#1F2933" text-anchor="start" font-weight="bold">数据集构建漏斗</text>
+<text x="40.0" y="72.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#61707D" text-anchor="start" font-weight="normal">每一关拦下的原因与数量见 quality_report.md</text>
+<text x="76.0" y="145.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="16" fill="#1F2933" text-anchor="end" font-weight="normal">原始采集</text>
+<rect x="90" y="110" width="650.0" height="58" fill="#BFC9D4" rx="3"/>
+<text x="752.0" y="146.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="18" fill="#1F2933" text-anchor="start" font-weight="bold">40375</text>
+<text x="76.0" y="229.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="16" fill="#1F2933" text-anchor="end" font-weight="normal">质检通过</text>
+<rect x="90" y="194" width="166.0" height="58" fill="#8FA8C8" rx="3"/>
+<text x="268.0" y="230.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="18" fill="#1F2933" text-anchor="start" font-weight="bold">10312</text>
+<text x="96.0" y="229.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="start" font-weight="normal">留存 26%</text>
+<text x="76.0" y="313.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="16" fill="#1F2933" text-anchor="end" font-weight="normal">去重后</text>
+<rect x="90" y="278" width="160.7" height="58" fill="#6C8EBF" rx="3"/>
+<text x="262.7" y="314.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="18" fill="#1F2933" text-anchor="start" font-weight="bold">9985</text>
+<text x="96.0" y="313.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="start" font-weight="normal">留存 97%</text>
+<text x="76.0" y="397.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="16" fill="#1F2933" text-anchor="end" font-weight="normal">最终入集</text>
+<rect x="90" y="362" width="64.4" height="58" fill="#2F5D8A" rx="3"/>
+<text x="166.4" y="398.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="18" fill="#1F2933" text-anchor="start" font-weight="bold">4000</text>
+<text x="96.0" y="397.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="start" font-weight="normal">留存 40%</text>
+</svg>

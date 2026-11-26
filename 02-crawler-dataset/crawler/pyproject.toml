@@ -1,0 +1,31 @@
+[project]
+name = "k12-question-crawler"
+version = "1.0.0"
+description = "K12 试题数据爬虫 —— 可独立运行、可自动调度、Agent-Friendly，内置多模态(VLM)题目解析"
+authors = [{ name = "K12 Crawler Team" }]
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.28",
+    "beautifulsoup4>=4.11",
+    "lxml>=4.9",
+    "PyYAML>=6.0",
+    "typer>=0.9",
+    "rich>=13.0",
+    "APScheduler>=3.10",
+    "openai>=1.30",
+    "PyMuPDF>=1.23",
+    "Pillow>=10.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+k12crawler = "k12crawler.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["k12crawler*"]

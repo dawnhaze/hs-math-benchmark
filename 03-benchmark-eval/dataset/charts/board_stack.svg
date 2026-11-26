@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+<rect width="960" height="560" fill="#FFFFFF"/>
+<text x="40.0" y="46.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="24" fill="#1F2933" text-anchor="start" font-weight="bold">各板块题量与难度构成</text>
+<text x="40.0" y="72.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#61707D" text-anchor="start" font-weight="normal">合计 4000 道；条内三段为 基础 / 中档 / 压轴</text>
+<line x1="110" y1="88" x2="110" y2="516" stroke="#D5DBE1"/>
+<text x="96.0" y="124.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="15" fill="#1F2933" text-anchor="end" font-weight="normal">函数</text>
+<rect x="110.0" y="96" width="316.0" height="44" fill="#7FB3D5" rx="2"/>
+<text x="268.0" y="124.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="426.0" y="96" width="316.0" height="44" fill="#F5B041" rx="2"/>
+<text x="584.0" y="124.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="742.0" y="96" width="158.0" height="44" fill="#C0392B" rx="2"/>
+<text x="821.0" y="124.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">148</text>
+<text x="910.0" y="124.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#61707D" text-anchor="start" font-weight="normal">740</text>
+<text x="96.0" y="194.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="15" fill="#1F2933" text-anchor="end" font-weight="normal">数列</text>
+<rect x="110.0" y="166" width="316.0" height="44" fill="#7FB3D5" rx="2"/>
+<text x="268.0" y="194.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="426.0" y="166" width="316.0" height="44" fill="#F5B041" rx="2"/>
+<text x="584.0" y="194.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="742.0" y="166" width="158.0" height="44" fill="#C0392B" rx="2"/>
+<text x="821.0" y="194.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">148</text>
+<text x="910.0" y="194.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#61707D" text-anchor="start" font-weight="normal">740</text>
+<text x="96.0" y="264.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="15" fill="#1F2933" text-anchor="end" font-weight="normal">立体几何</text>
+<rect x="110.0" y="236" width="316.0" height="44" fill="#7FB3D5" rx="2"/>
+<text x="268.0" y="264.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="426.0" y="236" width="316.0" height="44" fill="#F5B041" rx="2"/>
+<text x="584.0" y="264.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="742.0" y="236" width="158.0" height="44" fill="#C0392B" rx="2"/>
+<text x="821.0" y="264.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">148</text>
+<text x="910.0" y="264.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#61707D" text-anchor="start" font-weight="normal">740</text>
+<text x="96.0" y="334.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="15" fill="#1F2933" text-anchor="end" font-weight="normal">解析几何</text>
+<rect x="110.0" y="306" width="316.0" height="44" fill="#7FB3D5" rx="2"/>
+<text x="268.0" y="334.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="426.0" y="306" width="316.0" height="44" fill="#F5B041" rx="2"/>
+<text x="584.0" y="334.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="742.0" y="306" width="158.0" height="44" fill="#C0392B" rx="2"/>
+<text x="821.0" y="334.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">148</text>
+<text x="910.0" y="334.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#61707D" text-anchor="start" font-weight="normal">740</text>
+<text x="96.0" y="404.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="15" fill="#1F2933" text-anchor="end" font-weight="normal">概率与统计</text>
+<rect x="110.0" y="376" width="316.0" height="44" fill="#7FB3D5" rx="2"/>
+<text x="268.0" y="404.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="426.0" y="376" width="316.0" height="44" fill="#F5B041" rx="2"/>
+<text x="584.0" y="404.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">296</text>
+<rect x="742.0" y="376" width="158.0" height="44" fill="#C0392B" rx="2"/>
+<text x="821.0" y="404.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">148</text>
+<text x="910.0" y="404.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#61707D" text-anchor="start" font-weight="normal">740</text>
+<text x="96.0" y="474.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="15" fill="#1F2933" text-anchor="end" font-weight="normal">导数及其应用</text>
+<rect x="110.0" y="446" width="128.1" height="44" fill="#7FB3D5" rx="2"/>
+<text x="174.1" y="474.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">120</text>
+<rect x="238.1" y="446" width="128.1" height="44" fill="#F5B041" rx="2"/>
+<text x="302.2" y="474.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">120</text>
+<rect x="366.2" y="446" width="64.1" height="44" fill="#C0392B" rx="2"/>
+<text x="398.2" y="474.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">60</text>
+<text x="440.3" y="474.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#61707D" text-anchor="start" font-weight="normal">300</text>
+<rect x="110" y="514" width="14" height="14" fill="#7FB3D5" rx="2"/>
+<text x="130.0" y="526.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#1F2933" text-anchor="start" font-weight="normal">基础</text>
+<rect x="206" y="514" width="14" height="14" fill="#F5B041" rx="2"/>
+<text x="226.0" y="526.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#1F2933" text-anchor="start" font-weight="normal">中档</text>
+<rect x="302" y="514" width="14" height="14" fill="#C0392B" rx="2"/>
+<text x="322.0" y="526.0" font-family="'Microsoft YaHei','PingFang SC','Source Han Sans SC',sans-serif" font-size="14" fill="#1F2933" text-anchor="start" font-weight="normal">压轴</text>
+</svg>

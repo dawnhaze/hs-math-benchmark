@@ -1,0 +1,736 @@
+{
+  "overall": {
+    "n": 4000,
+    "correct": 2992,
+    "accuracy": 0.748,
+    "ci95": [
+      0.7343,
+      0.7612
+    ],
+    "invalid": 0,
+    "invalid_rate": 0.0,
+    "errors": 0,
+    "error_rate": 0.0,
+    "avg_latency": 0.605
+  },
+  "board": {
+    "数列": {
+      "n": 740,
+      "correct": 563,
+      "accuracy": 0.7608,
+      "ci95": [
+        0.7288,
+        0.7902
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.605
+    },
+    "立体几何": {
+      "n": 740,
+      "correct": 564,
+      "accuracy": 0.7622,
+      "ci95": [
+        0.7302,
+        0.7914
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.603
+    },
+    "解析几何": {
+      "n": 740,
+      "correct": 548,
+      "accuracy": 0.7405,
+      "ci95": [
+        0.7078,
+        0.7708
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.607
+    },
+    "概率与统计": {
+      "n": 740,
+      "correct": 548,
+      "accuracy": 0.7405,
+      "ci95": [
+        0.7078,
+        0.7708
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.601
+    },
+    "函数": {
+      "n": 740,
+      "correct": 540,
+      "accuracy": 0.7297,
+      "ci95": [
+        0.6966,
+        0.7605
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.606
+    },
+    "导数及其应用": {
+      "n": 300,
+      "correct": 229,
+      "accuracy": 0.7633,
+      "ci95": [
+        0.7121,
+        0.8079
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.614
+    }
+  },
+  "sub_board": {
+    "数列": {
+      "n": 740,
+      "correct": 563,
+      "accuracy": 0.7608,
+      "ci95": [
+        0.7288,
+        0.7902
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.605
+    },
+    "立体几何": {
+      "n": 740,
+      "correct": 564,
+      "accuracy": 0.7622,
+      "ci95": [
+        0.7302,
+        0.7914
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.603
+    },
+    "解析几何": {
+      "n": 740,
+      "correct": 548,
+      "accuracy": 0.7405,
+      "ci95": [
+        0.7078,
+        0.7708
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.607
+    },
+    "概率与统计": {
+      "n": 444,
+      "correct": 334,
+      "accuracy": 0.7523,
+      "ci95": [
+        0.71,
+        0.7901
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.612
+    },
+    "函数": {
+      "n": 302,
+      "correct": 211,
+      "accuracy": 0.6987,
+      "ci95": [
+        0.6447,
+        0.7477
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.597
+    },
+    "导数及其应用": {
+      "n": 300,
+      "correct": 229,
+      "accuracy": 0.7633,
+      "ci95": [
+        0.7121,
+        0.8079
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.614
+    },
+    "计数原理": {
+      "n": 296,
+      "correct": 214,
+      "accuracy": 0.723,
+      "ci95": [
+        0.6694,
+        0.7709
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.583
+    },
+    "集合与常用逻辑": {
+      "n": 290,
+      "correct": 223,
+      "accuracy": 0.769,
+      "ci95": [
+        0.7171,
+        0.8138
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.622
+    },
+    "三角函数": {
+      "n": 148,
+      "correct": 106,
+      "accuracy": 0.7162,
+      "ci95": [
+        0.6388,
+        0.7827
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.592
+    }
+  },
+  "difficulty": {
+    "中档": {
+      "n": 1600,
+      "correct": 1174,
+      "accuracy": 0.7338,
+      "ci95": [
+        0.7116,
+        0.7548
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.606
+    },
+    "基础": {
+      "n": 1600,
+      "correct": 1299,
+      "accuracy": 0.8119,
+      "ci95": [
+        0.792,
+        0.8303
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.603
+    },
+    "压轴": {
+      "n": 800,
+      "correct": 519,
+      "accuracy": 0.6488,
+      "ci95": [
+        0.615,
+        0.681
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.607
+    }
+  },
+  "subset": {
+    "core": {
+      "n": 3811,
+      "correct": 2853,
+      "accuracy": 0.7486,
+      "ci95": [
+        0.7346,
+        0.7621
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.606
+    },
+    "extended": {
+      "n": 189,
+      "correct": 139,
+      "accuracy": 0.7354,
+      "ci95": [
+        0.6683,
+        0.7932
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.58
+    }
+  },
+  "source": {
+    "青夏教育精英家教网": {
+      "n": 3828,
+      "correct": 2864,
+      "accuracy": 0.7482,
+      "ci95": [
+        0.7342,
+        0.7617
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.606
+    },
+    "菁优网": {
+      "n": 172,
+      "correct": 128,
+      "accuracy": 0.7442,
+      "ci95": [
+        0.6741,
+        0.8036
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.586
+    }
+  },
+  "split": {
+    "test": {
+      "n": 3800,
+      "correct": 2855,
+      "accuracy": 0.7513,
+      "ci95": [
+        0.7373,
+        0.7648
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.606
+    },
+    "dev": {
+      "n": 200,
+      "correct": 137,
+      "accuracy": 0.685,
+      "ci95": [
+        0.6176,
+        0.7454
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.594
+    }
+  },
+  "year_bucket": {
+    "未知": {
+      "n": 3833,
+      "correct": 2868,
+      "accuracy": 0.7482,
+      "ci95": [
+        0.7343,
+        0.7617
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.606
+    },
+    "2019 及以后": {
+      "n": 147,
+      "correct": 111,
+      "accuracy": 0.7551,
+      "ci95": [
+        0.6797,
+        0.8175
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.586
+    },
+    "2010–2018": {
+      "n": 19,
+      "correct": 12,
+      "accuracy": 0.6316,
+      "ci95": [
+        0.4104,
+        0.8085
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.56
+    },
+    "2009 及以前": {
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "ci95": [
+        0.2065,
+        1.0
+      ],
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency": 0.928
+    }
+  },
+  "board_x_difficulty": {
+    "函数": {
+      "基础": {
+        "n": 296,
+        "correct": 230,
+        "accuracy": 0.777,
+        "ci95": [
+          0.7262,
+          0.8207
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.596
+      },
+      "中档": {
+        "n": 296,
+        "correct": 214,
+        "accuracy": 0.723,
+        "ci95": [
+          0.6694,
+          0.7709
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.616
+      },
+      "压轴": {
+        "n": 148,
+        "correct": 96,
+        "accuracy": 0.6486,
+        "ci95": [
+          0.5689,
+          0.7209
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.604
+      }
+    },
+    "导数及其应用": {
+      "基础": {
+        "n": 120,
+        "correct": 97,
+        "accuracy": 0.8083,
+        "ci95": [
+          0.7288,
+          0.8688
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.601
+      },
+      "中档": {
+        "n": 120,
+        "correct": 91,
+        "accuracy": 0.7583,
+        "ci95": [
+          0.6745,
+          0.8261
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.618
+      },
+      "压轴": {
+        "n": 60,
+        "correct": 41,
+        "accuracy": 0.6833,
+        "ci95": [
+          0.5577,
+          0.7869
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.633
+      }
+    },
+    "数列": {
+      "基础": {
+        "n": 296,
+        "correct": 253,
+        "accuracy": 0.8547,
+        "ci95": [
+          0.81,
+          0.8903
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.601
+      },
+      "中档": {
+        "n": 296,
+        "correct": 210,
+        "accuracy": 0.7095,
+        "ci95": [
+          0.6553,
+          0.7582
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.596
+      },
+      "压轴": {
+        "n": 148,
+        "correct": 100,
+        "accuracy": 0.6757,
+        "ci95": [
+          0.5966,
+          0.7458
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.628
+      }
+    },
+    "立体几何": {
+      "基础": {
+        "n": 296,
+        "correct": 248,
+        "accuracy": 0.8378,
+        "ci95": [
+          0.7916,
+          0.8755
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.605
+      },
+      "中档": {
+        "n": 296,
+        "correct": 219,
+        "accuracy": 0.7399,
+        "ci95": [
+          0.687,
+          0.7865
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.609
+      },
+      "压轴": {
+        "n": 148,
+        "correct": 97,
+        "accuracy": 0.6554,
+        "ci95": [
+          0.5758,
+          0.7272
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.588
+      }
+    },
+    "解析几何": {
+      "基础": {
+        "n": 296,
+        "correct": 227,
+        "accuracy": 0.7669,
+        "ci95": [
+          0.7155,
+          0.8115
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.614
+      },
+      "中档": {
+        "n": 296,
+        "correct": 222,
+        "accuracy": 0.75,
+        "ci95": [
+          0.6977,
+          0.7959
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.601
+      },
+      "压轴": {
+        "n": 148,
+        "correct": 99,
+        "accuracy": 0.6689,
+        "ci95": [
+          0.5897,
+          0.7396
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.604
+      }
+    },
+    "概率与统计": {
+      "基础": {
+        "n": 296,
+        "correct": 244,
+        "accuracy": 0.8243,
+        "ci95": [
+          0.7769,
+          0.8634
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.598
+      },
+      "中档": {
+        "n": 296,
+        "correct": 218,
+        "accuracy": 0.7365,
+        "ci95": [
+          0.6835,
+          0.7834
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.603
+      },
+      "压轴": {
+        "n": 148,
+        "correct": 86,
+        "accuracy": 0.5811,
+        "ci95": [
+          0.5005,
+          0.6575
+        ],
+        "invalid": 0,
+        "invalid_rate": 0.0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "avg_latency": 0.6
+      }
+    }
+  },
+  "macro_board_accuracy": 0.7495,
+  "answer_extraction": {
+    "答案标记": 4000
+  },
+  "chance_baseline": {
+    "random": 0.25,
+    "most_common_letter": "C",
+    "most_common_rate": 0.2985,
+    "delta_over_random": 0.0485
+  },
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "per_item_tokens": 0.0,
+    "avg_calls": 2.0,
+    "truncated": 0
+  },
+  "stage_behavior": {
+    "items": 4000,
+    "changed": 593,
+    "changed_rate": 0.1482,
+    "changed_to_correct": 493,
+    "changed_to_wrong": 100
+  },
+  "option_distribution": {
+    "A": 876,
+    "D": 987,
+    "B": 1038,
+    "C": 1099
+  },
+  "meta": {
+    "model": "mock",
+    "provider": "mock",
+    "dataset": "D:\\workbuddy\\2026-11-21-13-17-20\\mathbench_v3\\交付_数据集与评测脚本\\dataset\\benchmark_v3.template.jsonl",
+    "mode": "deep",
+    "deep_rounds": 2,
+    "prompt": "fixed:deep",
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "concurrency": 8,
+    "seed": 0,
+    "items": 4000,
+    "started_at": "2026-11-21 17:47:34",
+    "elapsed": 0.2,
+    "finished_at": "2026-11-21 17:47:34",
+    "mock": true
+  }
+}

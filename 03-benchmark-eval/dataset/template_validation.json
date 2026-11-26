@@ -1,0 +1,10 @@
+{
+  "file": "data/benchmark_v3/benchmark_v3.template.jsonl",
+  "attempted": 4000,
+  "valid": 4000,
+  "failed": 0,
+  "skipped": 0,
+  "pass_rate": 1.0,
+  "top_reasons": {},
+  "quarantine": "data\\benchmark_v3\\template_invalid.jsonl"
+}

@@ -1,0 +1,188 @@
+# ============================================================================
+#  K12 试题爬虫 —— 主配置文件
+#  用法：复制为 config/config.yaml 后按需修改。
+#  填好「账号 / LLM API / VLM Backbone」后即可全自动运行，无需人工干预。
+# ============================================================================
+
+project:
+  name: "k12-crawler"
+  data_dir: "data"            # 所有产物的根目录
+  log_dir: "logs"
+  log_level: "INFO"           # DEBUG | INFO | WARNING | ERROR
+
+# ---------------------------------------------------------------------------
+# 爬虫（基础要求 1 / 2）
+# ---------------------------------------------------------------------------
+crawler:
+  # 可选三条采集路线（同一站点、不同页面类型，产出字段有差异）：
+  #   jiajiao1010-subject 学科栏目路线（推荐）：{column}/shiti_page_N -> shiti_id_H
+  #                       两跳直达；学科定向；详情页给【答案】+【解析】+【解法提示】
+  #   jiajiao1010         平铺习题索引：xiti_page_N -> xiti_id_M
+  #                       量大、快；给【答案】，但该页面类型不含【解析】
+  #   jiajiao1010-paper   试卷路线：paper_page_N -> paper_id_M -> timu_id_K -> shiti_id_H
+  #                       给完整解答过程；代价是多一跳请求，且列出的是"相似题"，
+  #                       语料相似度偏高、去重压力大
+  source: "jiajiao1010-subject"
+  base_url: "http://www.1010jiajiao.com"
+
+  # 学科栏目路线专用：要抓哪个学科栏目。常用取值：
+  #   xxsx/xxyw/xxyy  小学数学/语文/英语
+  #   czsx/czyw/czyy  初中数学/语文/英语
+  #   czwl/czhx/czsw/czzz/czls/czdl  初中物理/化学/生物/政治/历史/地理
+  #   gzsx/gzyw/gzyy/gzwl/gzhx/gzsw/gzzz/gzls/gzdl  高中各科
+  column: "czsx"
+
+  # --- 抓取范围（决定"跑多久、跑多深"）---
+  start_page: 1               # 起始索引页
+  max_pages: 40               # 单次运行最多翻多少索引页（0 = 不限）
+  page_step: 1                # 翻页步长
+  max_questions: 400          # 单次运行最多入库多少题（0 = 不限）
+  fetch_detail: true          # 是否再抓一次详情页拿【答案】【解析】
+
+  # --- 稀疏矿脉策略 ---
+  # 本站索引页存在"死区"（连续多页无题）。传统爬虫遇空即停，会丢掉后半段储量。
+  # 这里改为：连续空 empty_tolerance 页后开始指数探矿（8 → 16 → 32 … 上限 5000 页），
+  # 越过分页条给出的最后一页才真正结束。
+  empty_tolerance: 3
+  empty_jump: 8
+
+  # 试卷路线专用：每份试卷最多下钻多少道题（配合 max_questions 一起限流）
+  questions_per_paper: 6
+
+  # --- 礼貌与稳定性 ---
+  concurrency: 4              # 并发线程数
+  delay: 0.6                  # 每个请求之间的基准间隔（秒）
+  jitter: 0.3                 # 间隔随机抖动，避免被识别为机器人
+  timeout: 20                 # 单请求超时（秒）
+  retries: 3                  # 失败重试次数
+  backoff: 2.0                # 重试退避倍数
+  respect_robots: true        # 是否遵守 robots.txt
+  proxy: ""                   # 例如 "http://127.0.0.1:7890"，留空不使用
+
+  # --- 账号（部分站点需要登录后才能取答案；本站公开页无需登录）---
+  account:
+    username: ""              # 需要登录的站点在此填写
+    password: ""
+    cookie: ""                # 也可直接粘贴浏览器 Cookie
+
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15"
+    - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+# ---------------------------------------------------------------------------
+# 存储（基础要求 3）：SQLite 为主，JSON / JSONL 为辅
+# ---------------------------------------------------------------------------
+storage:
+  sqlite_path: "data/k12.sqlite3"
+  jsonl_path: "data/questions.jsonl"    # 追加式，方便流式消费
+  json_snapshot_dir: "data/json"        # 每次运行的快照
+  snapshot_every: 200                   # 每入库 N 题导出一份快照
+  save_raw_html: false                  # 是否把原始 HTML 也留档（便于复盘）
+  raw_html_dir: "data/raw"
+
+# ---------------------------------------------------------------------------
+# 自动运行（基础要求 2）：填入配置后 `k12crawler daemon` 即可无人值守
+# ---------------------------------------------------------------------------
+schedule:
+  enabled: true
+  interval_minutes: 30        # 每 30 分钟自动跑一轮（增量续爬）
+  run_on_start: true          # 守护进程启动时先跑一轮
+  window: ""                  # 例如 "01:00-06:00" 限定在夜间跑，留空不限
+  max_rounds: 0               # 0 = 永久运行；>0 表示跑完 N 轮后自动退出
+
+# ---------------------------------------------------------------------------
+# 模型 / VLM Backbone（拓展要求 1 & 2）
+#   · default = 基准 Backbone（按作业要求以 Qwen 系列为基准）
+#   · 任意流程都可通过 --backbone <name> 或下面 default 一键切换
+# ---------------------------------------------------------------------------
+models:
+  default: "qwen3-9b"
+  temperature: 0.1
+  max_tokens: 4096
+  timeout: 180
+  request_retries: 2
+
+  backbones:
+
+    # ===== 基准 Backbone（作业要求的默认值）=====
+    qwen3-9b:
+      provider: "ollama"                  # ollama | openai_compatible
+      model: "qwen3:9b"
+      base_url: "http://127.0.0.1:11434/v1"
+      api_key: "ollama"
+      vision: true
+      note: "基准 Backbone。本地 Ollama 部署，多模态统一入口。"
+
+    # ===== 拓展要求 1：本地多模态 Qwen =====
+    qwen3-vl-8b:
+      provider: "ollama"
+      model: "qwen3-vl:8b"
+      base_url: "http://127.0.0.1:11434/v1"
+      api_key: "ollama"
+      vision: true
+      note: "本地多模态视觉模型，用于 PDF/图像/公式 取题。"
+
+    qwen2.5-vl-7b:
+      provider: "ollama"
+      model: "qwen2.5vl:7b"
+      base_url: "http://127.0.0.1:11434/v1"
+      api_key: "ollama"
+      vision: true
+      note: "上一代多模态，用于跨 Backbone 对比实验。"
+
+    # ===== 云端 / OpenAI 兼容端点（换 Backbone 只改这里）=====
+    gpt-4o-mini:
+      provider: "openai_compatible"
+      model: "gpt-4o-mini"
+      base_url: "https://api.openai.com/v1"
+      api_key_env: "OPENAI_API_KEY"       # 从环境变量读 Key，避免明文入库
+      vision: true
+
+    deepseek-chat:
+      provider: "openai_compatible"
+      model: "deepseek-chat"
+      base_url: "https://api.deepseek.com/v1"
+      api_key_env: "DEEPSEEK_API_KEY"
+      vision: false                       # 纯文本模型，仅用于文本解析
+
+    glm-4v:
+      provider: "openai_compatible"
+      model: "glm-4v-flash"
+      base_url: "https://open.bigmodel.cn/api/paas/v4"
+      api_key_env: "ZHIPU_API_KEY"
+      vision: true
+
+    # ===== 离线自检 Backbone（不联网、不调用任何模型）=====
+    # 用途：在没有本地 VLM、没有 API Key 的机器上验证整条多模态管路与
+    #       `k12crawler selftest`；产出会被标记 parser=mock，便于区分。
+    mock-offline:
+      provider: "mock"
+      model: "mock-vlm"
+      base_url: "offline://mock"
+      api_key: "none"
+      vision: true
+      note: "离线自检用，不产生真实模型推理。"
+
+# ---------------------------------------------------------------------------
+# 多模态解析（拓展要求 1）：PDF / 图像 / 文本 → 结构化题目
+# ---------------------------------------------------------------------------
+multimodal:
+  enabled: true
+  backbone: ""                 # 留空则用 models.default
+  render_dpi: 200              # PDF 渲染成图的清晰度
+  page_range: ""               # 例如 "1-10"，留空 = 全部页
+  text_first: true             # PDF 有文字层时先走文本解析，更快更省
+  formula_to_latex: true       # 把题目里的公式图片转成 LaTeX
+  max_images_per_question: 12  # 单题最多转几张公式图，防止烧算力
+  image_extensions: [".png", ".jpg", ".jpeg", ".bmp", ".webp", ".tif", ".tiff"]
+
+# ---------------------------------------------------------------------------
+# LLM 增强（可选）：清洗题干、补全知识点标签、判难度
+# ---------------------------------------------------------------------------
+enrich:
+  enabled: false
+  backbone: ""                 # 留空则用 models.default
+  infer_tags: true
+  infer_difficulty: true
+  clean_stem: true

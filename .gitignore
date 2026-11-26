@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+logs/
+*.log
+03-benchmark-eval/eval/results/results_*.jsonl
+03-benchmark-eval/eval/results/per_item_*.csv

@@ -1,0 +1,11 @@
+requests>=2.28
+beautifulsoup4>=4.11
+lxml>=4.9
+PyYAML>=6.0
+typer>=0.9
+rich>=13.0
+APScheduler>=3.10
+openai>=1.30
+PyMuPDF>=1.23
+Pillow>=10.0
+pytest>=7.4

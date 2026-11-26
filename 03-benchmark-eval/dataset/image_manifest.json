@@ -1,0 +1,31 @@
+{
+  "targets": 189,
+  "records_localized": 149,
+  "records_failed": 40,
+  "unique_urls": 239,
+  "downloaded": 232,
+  "failed": 7,
+  "bytes": 1387328,
+  "failure_samples": [
+    [
+      "https://thumb.zyjl.cn/pic1/1899/sx/176/171576.gif",
+      "HTTP 200 size 73"
+    ],
+    [
+      "https://thumb.zyjl.cn/pic1/files/down/test/2015/01/27/00/2015012700124546991946.files/image040.gif",
+      "HTTP 200 size 112"
+    ],
+    [
+      "https://thumb.zyjl.cn/pic1/1899/sx/163/342763.gif",
+      "HTTP 200 size 112"
+    ],
+    [
+      "https://thumb.zyjl.cn/pic1/0688/435/23935.gif",
+      "HTTP 200 size 163"
+    ],
+    [
+      "https://thumb.zyjl.cn/pic1/files/down/test/2015/01/27/00/2015012700124546991946.files/image039.gif",
+      "HTTP 200 size 126"
+    ]
+  ]
+}
